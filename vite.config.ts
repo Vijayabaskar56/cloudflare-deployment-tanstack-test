@@ -4,17 +4,27 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { cloudflare } from '@cloudflare/vite-plugin'
-
+import { nitro } from 'nitro/vite'
 const config = defineConfig({
   plugins: [
-    // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tailwindcss(),
     tanstackStart({
+      client : {},
+      server : {},
+      vite : {},
+      prerender : {},
+      spa : {
+        enabled : true,
+        prerender : {
+          autoSubfolderIndex : true
+        }
+      },
     }),
+     nitro(),
     viteReact(),
   ],
 })

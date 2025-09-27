@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "tanstack-migration",
-  "compatibility_date": "2025-09-02",
+  "compatibility_date": "2025-09-27",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./dist/server/index.js",
-    "assets": {
-        "binding": "ASSETS",
-        "directory": "./dist/client"
+  "assets": {
+      "binding": "ASSETS",
+      "directory": "./dist/client"
   },
   "vars": {
     "MY_VAR": "Hello from Cloudflare"
