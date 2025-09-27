@@ -10,7 +10,9 @@
     "test": "vitest run",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface Env"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.13.7",
