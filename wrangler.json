@@ -3,7 +3,11 @@
   "name": "tanstack-migration",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry",
+  "main": "./dist/server/server.js",
+    "assets": {
+        "binding": "ASSETS",
+        "directory": "./dist/client"
+  },
   "vars": {
     "MY_VAR": "Hello from Cloudflare"
   }
