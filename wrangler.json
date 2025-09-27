@@ -3,7 +3,7 @@
   "name": "tanstack-migration",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "./dist/server/server.js",
+  "main": "./dist/server/index.js",
     "assets": {
         "binding": "ASSETS",
         "directory": "./dist/client"
